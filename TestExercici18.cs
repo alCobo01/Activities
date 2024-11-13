@@ -3,8 +3,9 @@ using activitiesUtils;
 namespace TestActivities
 {
     [TestClass]
-    public class UnitTest1
+    public class TestExercici18
     {
+        // Test per límits a dins del rang permés
         [TestMethod]
         public void RangeLimitInsideOne()
         {
@@ -29,6 +30,7 @@ namespace TestActivities
             Assert.IsTrue(test);
         }
 
+        // Test per límits a fora del rang permés
         [TestMethod]
         public void RangeLimitOutsideOne()
         {
@@ -53,6 +55,7 @@ namespace TestActivities
             Assert.IsFalse(test);
         }
 
+        // Test per valors a fora del rang permés
         [TestMethod]
         public void OutsideOfRangeOne()
         {
