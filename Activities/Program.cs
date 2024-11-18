@@ -4,24 +4,24 @@ namespace ActivitatsPrimerTema
 {
     public class Program
     {
-        public static double CelsiusToFarenheit(double temperature)
+        public static double MinutToSecond(int minuts)
         {
-            return (1.8 * temperature) + 32;
+            return minuts * 60;
         }
 
         public static void Main()
         {
-            const string PrimerMissatge = "Introdueix la temperatura en Celsius (Cº): ";
-            const string MissatgeResultat = "La teva temperatura en Farenheit és";
+            const string PrimerMissatge = "Introdueix quants minuts vols passar a segons: ";
+            const string MissatgeResultat = "{0} minuts són {1} segons";
             const string MissatgeError = "Format incorrecte";
 
-            double numUser;
+            int numUser;
 
             Console.Write(PrimerMissatge);
             try
             {
-                numUser = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine($"{MissatgeResultat} {CelsiusToFarenheit(numUser)}");
+                numUser = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(MissatgeResultat, numUser, MinutToSecond(numUser));
             }
             catch (FormatException)
             {
